@@ -28,6 +28,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run build.sh to create zip file build/HideNavigationPill.zip
         run: ./build.sh
+
+      # Uploads zip file to github releases
+      - name: Uploads zip file github
+        uses: actions/upload-artifact@v1
+        with:
+          name: release
+          path: build/HideNavigationPill.zip
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
