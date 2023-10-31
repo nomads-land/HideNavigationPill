@@ -27,5 +27,5 @@ jobs:
       - name: Uploads zip file github
         uses: actions/upload-artifact@v1
         with:
-          name: release
-          path: build/HideNavigationPill.zip
+          name: HideNavigationPill
+          path: build/*
